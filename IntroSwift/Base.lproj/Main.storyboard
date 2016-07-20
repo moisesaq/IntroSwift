@@ -17,14 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write here country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ULk-om-9yB">
-                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="194" width="152" height="30"/>
-                                </variation>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynu-Cg-wqN">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -50,17 +42,6 @@
                                 </variation>
                                 <connections>
                                     <action selector="orderList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pce-fO-V7O"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-Ue-18c">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="OK"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                    <rect key="frame" x="141" y="129" width="120" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="llk-6a-BvN"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Num A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-SN-zG3">
@@ -119,34 +100,77 @@
                                     <rect key="frame" x="203" y="193" width="51" height="31"/>
                                 </variation>
                             </switch>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write here country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ULk-om-9yB">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="194" width="152" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-sa-QEs">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Calculate"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="203" y="129" width="70" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="startCalculateAll:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZAa-sl-94R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUG-7X-9cS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Join"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="203" y="245" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="startJoin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UbD-ZC-bD8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-Ue-18c">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                    <rect key="frame" x="32" y="129" width="120" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="llk-6a-BvN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="ULk-om-9yB"/>
                                 <exclude reference="ynu-Cg-wqN"/>
                                 <exclude reference="F9i-Wm-76c"/>
-                                <exclude reference="MaA-Ue-18c"/>
                                 <exclude reference="aeH-SN-zG3"/>
                                 <exclude reference="VGV-uB-0R3"/>
                                 <exclude reference="Nuc-ij-quQ"/>
                                 <exclude reference="Zt3-Hc-Wqn"/>
                                 <exclude reference="Skg-B7-sIQ"/>
                                 <exclude reference="GAM-Ik-OZn"/>
+                                <exclude reference="ULk-om-9yB"/>
+                                <exclude reference="zd7-sa-QEs"/>
+                                <exclude reference="JUG-7X-9cS"/>
+                                <exclude reference="MaA-Ue-18c"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="ULk-om-9yB"/>
                                 <include reference="ynu-Cg-wqN"/>
                                 <include reference="F9i-Wm-76c"/>
-                                <include reference="MaA-Ue-18c"/>
                                 <include reference="aeH-SN-zG3"/>
                                 <include reference="VGV-uB-0R3"/>
                                 <include reference="Nuc-ij-quQ"/>
                                 <include reference="Zt3-Hc-Wqn"/>
                                 <include reference="Skg-B7-sIQ"/>
                                 <include reference="GAM-Ik-OZn"/>
+                                <include reference="ULk-om-9yB"/>
+                                <include reference="zd7-sa-QEs"/>
+                                <include reference="JUG-7X-9cS"/>
+                                <include reference="MaA-Ue-18c"/>
                             </mask>
                         </variation>
                     </view>
@@ -154,6 +178,8 @@
                         <outlet property="NumA" destination="aeH-SN-zG3" id="y1p-il-lAn"/>
                         <outlet property="NumB" destination="VGV-uB-0R3" id="cby-GA-i4q"/>
                         <outlet property="add" destination="Zt3-Hc-Wqn" id="QK0-i3-hZl"/>
+                        <outlet property="calculateAll" destination="zd7-sa-QEs" id="SRg-un-zY1"/>
+                        <outlet property="join" destination="JUG-7X-9cS" id="GcF-hc-WZp"/>
                         <outlet property="numA" destination="aeH-SN-zG3" id="lcs-Df-JuU"/>
                         <outlet property="numB" destination="VGV-uB-0R3" id="kt3-Bh-9dx"/>
                         <outlet property="ok" destination="MaA-Ue-18c" id="N3W-wD-eyP"/>

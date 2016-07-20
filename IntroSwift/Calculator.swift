@@ -60,4 +60,12 @@ class Calculator{
         total = a / b
         return total
     }
+    
+    func calculateAll(a: Double, b: Double) -> (Double, Double, Double, Double){
+        let r1 = a + b
+        let r2 = a - b
+        let r3 = a * b
+        let r4 = a / b
+        return (r1, r2, r3, r4)
+    }
 }

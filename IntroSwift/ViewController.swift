@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var result: UILabel!
     
     @IBOutlet weak var ok: UIButton!
+    @IBOutlet weak var calculateAll: UIButton!
     
     
     @IBOutlet weak var textField: UITextField!
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultArray: UILabel!
     @IBOutlet weak var add: UIButton!
     @IBOutlet weak var order: UIButton!
+    @IBOutlet weak var join: UIButton!
     
     let calc = Calculator()
     var operationAction: Int = 0
@@ -80,6 +82,14 @@ class ViewController: UIViewController {
 
     }
 
+    @IBAction func startCalculateAll(sender: UIButton) {
+        a = Double(numA.text!)!
+        b = Double(numB.text!)!
+        
+        let resultOpe = calc.calculateAll(a, b: b)
+        result.text = "Sum: \(resultOpe.0) >> Substract: \(resultOpe.1)"
+    }
+    
     @IBAction func addNum(sender: AnyObject) {
         addToListCountries(textField.text!)
     }
@@ -95,7 +105,12 @@ class ViewController: UIViewController {
         }
     }
     
-    /*------ TESTING COLLECTION ARRAY OF STRING ----*/
+    @IBAction func startJoin(sender: AnyObject) {
+        let resultText = joinText(list: listCountries)
+        resultArray.text = resultText
+    }
+    
+    /*------ ARRAY OF STRING ----*/
     func addToListCountries(country: String){
         if(country != ""){
             listCountries.append(country)
@@ -103,6 +118,23 @@ class ViewController: UIViewController {
             
             resultArray.text = String(listCountries)
         }
+    }
+    
+    func joinText(separator: Character = "*", list: [String]) -> String{
+        var join: String = ""
+        /*for text in list{
+            join += text
+            join += String(separator)
+        }*/
+        
+        //THIS IS FOR ENUMERATE AN ARRAY
+        for (index, text) in list.enumerate(){
+            join += text
+            if(index < list.count - 1){
+                join += String(separator)
+            }
+        }
+        return join
     }
 }
 
