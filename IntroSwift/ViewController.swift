@@ -27,6 +27,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var order: UIButton!
     @IBOutlet weak var join: UIButton!
     
+    @IBOutlet weak var testSwift: UIButton!
+    @IBOutlet weak var resultTest: UILabel!
+    
     let calc = Calculator()
     var operationAction: Int = 0
     
@@ -110,13 +113,15 @@ class ViewController: UIViewController {
         resultArray.text = resultText
     }
     
-    /*------ ARRAY OF STRING ----*/
+    /*------ ARRAYS ----*/
     func addToListCountries(country: String){
         if(country != ""){
             listCountries.append(country)
             //listCountries += [country]
             
             resultArray.text = String(listCountries)
+        }else{
+            print("Write country")
         }
     }
     
@@ -135,6 +140,13 @@ class ViewController: UIViewController {
             }
         }
         return join
+    }
+    
+    @IBAction func startTestSwift(sender: AnyObject) {
+        let test = TestSwift()
+        print(test.testTupla())
+        print(test.testTupla2())
+        resultTest.text = test.testTupla3Practico(100, y: 100)
     }
 }
 

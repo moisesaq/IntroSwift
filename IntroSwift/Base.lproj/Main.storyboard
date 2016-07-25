@@ -44,6 +44,17 @@
                                     <action selector="orderList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pce-fO-V7O"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-Ue-18c">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="OK"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                    <rect key="frame" x="32" y="129" width="120" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="llk-6a-BvN"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Num A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aeH-SN-zG3">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -128,15 +139,23 @@
                                     <action selector="startJoin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UbD-ZC-bD8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaA-Ue-18c">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="OK"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vC9-An-jj0">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                    <rect key="frame" x="32" y="129" width="120" height="30"/>
+                                    <rect key="frame" x="21" y="366" width="168" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS4-LY-O6R">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Test Swift"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="21" y="323" width="73" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="llk-6a-BvN"/>
+                                    <action selector="startTestSwift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XwL-cb-YDf"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -145,6 +164,7 @@
                             <mask key="subviews">
                                 <exclude reference="ynu-Cg-wqN"/>
                                 <exclude reference="F9i-Wm-76c"/>
+                                <exclude reference="MaA-Ue-18c"/>
                                 <exclude reference="aeH-SN-zG3"/>
                                 <exclude reference="VGV-uB-0R3"/>
                                 <exclude reference="Nuc-ij-quQ"/>
@@ -154,13 +174,15 @@
                                 <exclude reference="ULk-om-9yB"/>
                                 <exclude reference="zd7-sa-QEs"/>
                                 <exclude reference="JUG-7X-9cS"/>
-                                <exclude reference="MaA-Ue-18c"/>
+                                <exclude reference="vC9-An-jj0"/>
+                                <exclude reference="wS4-LY-O6R"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="ynu-Cg-wqN"/>
                                 <include reference="F9i-Wm-76c"/>
+                                <include reference="MaA-Ue-18c"/>
                                 <include reference="aeH-SN-zG3"/>
                                 <include reference="VGV-uB-0R3"/>
                                 <include reference="Nuc-ij-quQ"/>
@@ -170,7 +192,8 @@
                                 <include reference="ULk-om-9yB"/>
                                 <include reference="zd7-sa-QEs"/>
                                 <include reference="JUG-7X-9cS"/>
-                                <include reference="MaA-Ue-18c"/>
+                                <include reference="vC9-An-jj0"/>
+                                <include reference="wS4-LY-O6R"/>
                             </mask>
                         </variation>
                     </view>
@@ -186,9 +209,11 @@
                         <outlet property="order" destination="F9i-Wm-76c" id="HBC-7i-Cgc"/>
                         <outlet property="result" destination="Nuc-ij-quQ" id="EQs-UW-cVw"/>
                         <outlet property="resultArray" destination="ynu-Cg-wqN" id="cYU-3C-2fy"/>
+                        <outlet property="resultTest" destination="vC9-An-jj0" id="oK4-ni-NX2"/>
                         <outlet property="searchDisplayController" destination="MHD-5O-ovG" id="OCB-Bk-pe1"/>
                         <outlet property="segmentActionBasic" destination="Skg-B7-sIQ" id="9Q8-37-Qid"/>
                         <outlet property="switchOrder" destination="GAM-Ik-OZn" id="AII-C0-42f"/>
+                        <outlet property="testSwift" destination="wS4-LY-O6R" id="QZm-D2-sv7"/>
                         <outlet property="textField" destination="ULk-om-9yB" id="hdp-wv-pvS"/>
                     </connections>
                 </viewController>

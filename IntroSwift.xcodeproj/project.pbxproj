@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		800B01981D463F2D0025DBDF /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800B01971D463F2D0025DBDF /* TestSwift.swift */; };
 		803544021D37C4E600140EBB /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803544011D37C4E600140EBB /* Calculator.swift */; };
 		803544051D37C59500140EBB /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803544041D37C59500140EBB /* Place.swift */; };
 		80D7B6421D33CF4500F5991B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D7B6411D33CF4500F5991B /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		800B01971D463F2D0025DBDF /* TestSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestSwift.swift; sourceTree = "<group>"; };
 		803544011D37C4E600140EBB /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		803544041D37C59500140EBB /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		80D7B63E1D33CF4500F5991B /* IntroSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +83,7 @@
 		803544031D37C4FF00140EBB /* New Group */ = {
 			isa = PBXGroup;
 			children = (
+				800B01971D463F2D0025DBDF /* TestSwift.swift */,
 				803544011D37C4E600140EBB /* Calculator.swift */,
 				803544041D37C59500140EBB /* Place.swift */,
 			);
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				80D7B6441D33CF4500F5991B /* ViewController.swift in Sources */,
+				800B01981D463F2D0025DBDF /* TestSwift.swift in Sources */,
 				80D7B6421D33CF4500F5991B /* AppDelegate.swift in Sources */,
 				803544021D37C4E600140EBB /* Calculator.swift in Sources */,
 				803544051D37C59500140EBB /* Place.swift in Sources */,
