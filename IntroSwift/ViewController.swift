@@ -159,7 +159,8 @@ class ViewController: UIViewController {
         
         let test = TestSwift()
         print(test.testEnum1(amountWheels))
-        resultTest.text = test.testEnum2(fav)
+        print(test.testEnum2(fav))
+        resultTest.text = test.testEnum3(8)
     }
 }
 

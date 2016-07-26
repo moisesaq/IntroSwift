@@ -98,4 +98,31 @@ class TestSwift{
         var typeSnock: Snock?
     }
     
+    class Character{
+        var life = 100
+        var strength = 100
+    }
+    
+    func testEnum3(points: Int) -> String{
+        let word = Weapon()
+        word.typeSnock = .snockMedium(points)
+        
+        let fighter = Character()
+        
+        switch word.typeSnock! {
+        case .snockSmall(let points):
+            fighter.life -= points
+        case .snockMedium(let points):
+            fighter.life -= points*2
+        case .snockLarge(let points):
+            fighter.life -= points*2
+        case .snockMortal:
+            fighter.life = 0
+        }
+        result = "Life of fighter: \(fighter.life)"
+        return result
+    }
+    
+
+    
 }
