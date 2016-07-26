@@ -23,7 +23,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="289" width="228" height="21"/>
+                                    <rect key="frame" x="21" y="263" width="228" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9i-Wm-76c">
@@ -38,7 +38,7 @@
                                     </attributedString>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="92" y="245" width="86" height="30"/>
+                                    <rect key="frame" x="92" y="219" width="86" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="orderList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pce-fO-V7O"/>
@@ -84,7 +84,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="ADD"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="245" width="46" height="30"/>
+                                    <rect key="frame" x="20" y="219" width="46" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="addNum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YqR-Ee-eaD"/>
@@ -108,7 +108,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GAM-Ik-OZn">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="203" y="193" width="51" height="31"/>
+                                    <rect key="frame" x="203" y="167" width="51" height="31"/>
                                 </variation>
                             </switch>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write here country" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ULk-om-9yB">
@@ -116,7 +116,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="194" width="152" height="30"/>
+                                    <rect key="frame" x="20" y="168" width="152" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd7-sa-QEs">
@@ -133,7 +133,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Join"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="203" y="245" width="46" height="30"/>
+                                    <rect key="frame" x="203" y="219" width="46" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="startJoin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UbD-ZC-bD8"/>
@@ -145,14 +145,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="366" width="168" height="21"/>
+                                    <rect key="frame" x="21" y="346" width="168" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wS4-LY-O6R">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Test Swift"/>
+                                <state key="normal" title="Test Swift">
+                                    <color key="titleShadowColor" red="1" green="0.50771321570000005" blue="0.26875628270000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="323" width="73" height="30"/>
+                                    <rect key="frame" x="21" y="303" width="73" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="startTestSwift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XwL-cb-YDf"/>

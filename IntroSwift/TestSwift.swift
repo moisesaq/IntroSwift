@@ -9,7 +9,9 @@
 import Foundation
 
 class TestSwift{
+    var result:String = ""
     
+    /*--------------------SECTION TEST TUPLE--------------------*/
     func testTupla() -> String{
         let film = ("Thor", 2013)
         return "\(film.0) : \(film.1)"
@@ -21,7 +23,6 @@ class TestSwift{
     }
     
     func testTupla3Practico(x: Int, y: Int) -> String{
-        var result:String
         let center = (100, 160)
         let coordenade = (x, y)
         
@@ -44,4 +45,57 @@ class TestSwift{
         
         return result
     }
+    /*----------------------SECTION TES ENUM----------------*/
+    /*enum wheels{
+        case una, dos, tres, cuatro
+    }*/
+    
+    enum wheels:Int{
+        case una = 1, dos = 2, tres = 3, cuatro = 4
+        //NOTE: Or case una = 1, dos, tres, cuartro
+    }
+    
+    enum ModelCar:String{
+        case toyota, ford, audi, nissan
+    }
+    
+    func testEnum1(numRuedas: wheels) -> String{
+        switch numRuedas {
+        case .una:
+            result = "Unicycle \(wheels.una.rawValue)";
+        case .dos:
+            result = "Moped \(wheels.dos.rawValue)";
+        case .tres:
+            result = "Tricycle \(wheels.tres.rawValue)";
+        case .cuatro:
+            result = "Car \(wheels.cuatro.rawValue)";
+        }
+        return result
+    }
+    
+    func testEnum2(favModel: ModelCar) -> String{
+        switch favModel{
+        case .toyota:
+            result = "Your favorite is \(ModelCar.toyota.rawValue)";
+        case .ford:
+            result = "Your favorite is \(ModelCar.ford.rawValue)";
+        case .audi:
+            result = "Your favorite is \(ModelCar.audi.rawValue)";
+        case .nissan:
+            result = "Your favorite is \(ModelCar.nissan.rawValue)";
+        }
+        return result
+    }
+    
+    enum Snock{
+        case snockSmall(Int)
+        case snockMedium(Int)
+        case snockLarge(Int)
+        case snockMortal
+    }
+    
+    class Weapon{
+        var typeSnock: Snock?
+    }
+    
 }

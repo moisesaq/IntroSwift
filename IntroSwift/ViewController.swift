@@ -143,10 +143,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startTestSwift(sender: AnyObject) {
+        testEnum()
+    }
+    
+    func testTuple(){
+        let testS = TestSwift()
+        print(testS.testTupla())
+        print(testS.testTupla2())
+        resultTest.text = testS.testTupla3Practico(100, y: 100)
+    }
+    
+    func testEnum(){
+        let amountWheels = TestSwift.wheels.cuatro
+        let fav = TestSwift.ModelCar.toyota
+        
         let test = TestSwift()
-        print(test.testTupla())
-        print(test.testTupla2())
-        resultTest.text = test.testTupla3Practico(100, y: 100)
+        print(test.testEnum1(amountWheels))
+        resultTest.text = test.testEnum2(fav)
     }
 }
 
