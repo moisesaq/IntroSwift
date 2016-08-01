@@ -143,9 +143,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startTestSwift(sender: AnyObject) {
-        testEnum()
+        //testEnum()
+        testStruct()
     }
     
+    
+    /*TEST TUPLE*/
     func testTuple(){
         let testS = TestSwift()
         print(testS.testTupla())
@@ -153,6 +156,7 @@ class ViewController: UIViewController {
         resultTest.text = testS.testTupla3Practico(100, y: 100)
     }
     
+    /*TEST ENUM*/
     func testEnum(){
         let amountWheels = TestSwift.wheels.cuatro
         let fav = TestSwift.ModelCar.toyota
@@ -161,6 +165,14 @@ class ViewController: UIViewController {
         print(test.testEnum1(amountWheels))
         print(test.testEnum2(fav))
         resultTest.text = test.testEnum3(8)
+    }
+    
+    /*TEST STRUCT*/
+    func testStruct(){
+        var contact1 = Contact(name: "Moises", lastname: "Apaza", phone: 12345, email: "moises.apaza@technorides.com")
+        print(contact1.getInformation())
+        print(contact1.getDomainEmail())
+        resultTest.text = contact1.changeDomainEmail("gmail.com")
     }
 }
 
